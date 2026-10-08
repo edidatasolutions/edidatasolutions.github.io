@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Edi, Ph.D. | R Software for Psychometrics</title>
+<meta name="description" content="Open-source R packages for psychometrics by Daniel Edi, Ph.D.: rater-mediated decisions, test security, item calibration, drift monitoring, through-year assessment and translated-exam comparability. All on CRAN.">
+<meta property="og:title" content="Daniel Edi, Ph.D. | R Software for Psychometrics">
+<meta property="og:description" content="Six open-source R packages for operational psychometrics, validated against known truth and published on CRAN.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #fbfbf9; --surface: #ffffff; --text: #1d2321; --muted: #5b6662;
+    --line: #e3e6e3; --accent: #1f7a4d; --accent-soft: #e8f3ec; --code: #f2f4f2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121614; --surface: #1a201d; --text: #e7ece9; --muted: #9eaaa4;
+      --line: #2b3430; --accent: #5cc08b; --accent-soft: #1e2d25; --code: #222a26;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 56px 0 36px; border-bottom: 1px solid var(--line); }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 12.5px; color: var(--accent); font-weight: 700; margin: 0 0 10px; }
+  h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.15; margin: 0 0 6px; }
+  .role { font-size: 18px; color: var(--muted); margin: 0 0 20px; }
+  .lede { max-width: 720px; font-size: 17.5px; margin: 0 0 22px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn {
+    display: inline-block; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px;
+    text-decoration: none; color: var(--text); background: var(--surface); font-size: 14.5px; font-weight: 600;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .stats { display: flex; flex-wrap: wrap; gap: 28px; margin: 30px 0 0; }
+  .stat b { display: block; font-size: 26px; color: var(--accent); line-height: 1.1; }
+  .stat span { font-size: 13.5px; color: var(--muted); }
+  main { padding: 40px 0 20px; }
+  h2 { font-size: 22px; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 26px; max-width: 720px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 470px), 1fr)); gap: 18px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 22px 18px;
+    display: flex; flex-direction: column;
+  }
+  .theme { font-size: 12px; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 700; }
+  .card h3 { margin: 6px 0 2px; font: 700 22px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .q { font-style: italic; margin: 0 0 10px; color: var(--muted); }
+  .card p { margin: 0 0 12px; }
+  .evidence { background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; font-size: 14.5px; margin: 0 0 14px; }
+  .evidence b { color: var(--accent); }
+  .card .links { margin-top: auto; }
+  .card .btn { font-size: 13.5px; padding: 6px 12px; }
+  section.install { margin: 44px 0 10px; }
+  pre {
+    background: var(--code); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px;
+    overflow-x: auto; font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; margin: 0;
+  }
+  .principles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 18px; margin: 44px 0 0; }
+  .principles div { border-top: 3px solid var(--accent); padding-top: 12px; }
+  .principles h4 { margin: 0 0 4px; font-size: 16px; }
+  .principles p { margin: 0; color: var(--muted); font-size: 15px; }
+  footer { border-top: 1px solid var(--line); margin-top: 48px; padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">R software portfolio</p>
+    <h1>Daniel Edi, Ph.D.</h1>
+    <p class="role">Psychometrician, American Board of Emergency Medicine</p>
+    <p class="lede">Open-source R packages for the questions operational psychometricians face every
+      cycle: who would have passed with different raters, which repeaters gained too much, how to
+      calibrate new items without pretest seats, when an item started drifting, how interim scores
+      should be used, and whether a translated form is comparable.</p>
+    <div class="links">
+      <a class="btn" href="https://sites.google.com/view/daniel-edi-phd/home">Main site</a>
+      <a class="btn" href="https://github.com/edidatasolutions">GitHub</a>
+      <a class="btn" href="https://edidatasolutions.r-universe.dev">r-universe</a>
+      <a class="btn" href="https://orcid.org/0000-0001-5475-819X">ORCID</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>6</b><span>packages on CRAN</span></div>
+      <div class="stat"><b>100</b><span>known-truth replications per validation study</span></div>
+      <div class="stat"><b>MIT</b><span>licensed, base-R dependencies</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h2>Packages</h2>
+    <p class="sub">Each package answers one operational question, ships a simulator with known truth, and reports
+      its own validation: how often it is right, and where it is not.</p>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="theme">Rater-mediated exams</span>
+        <h3>decisionfacets</h3>
+        <p class="q">Would this candidate have passed with a different set of raters?</p>
+        <p>Counterfactual pass probabilities for oral exams, OSCEs and essay scoring under the many-facet
+          Rasch model, computed exactly for the assigned panel, an average panel and a random panel, plus a
+          split of misclassification into measurement error and rater assignment.</p>
+        <p class="evidence"><b>Validation:</b> estimates from standard MFRM software recovered rater-dependent
+          candidates as well as an oracle that knows the true parameters (71%), and severity-adjusted scoring
+          removed rater dependence entirely.</p>
+        <div class="links">
+          <a class="btn" href="https://CRAN.R-project.org/package=decisionfacets">CRAN</a>
+          <a class="btn" href="https://edidatasolutions.github.io/decisionfacets/">Docs</a>
+          <a class="btn" href="https://github.com/edidatasolutions/decisionfacets">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="theme">Test security</span>
+        <h3>retestR</h3>
+        <p class="q">Did this repeater gain more than they should have?</p>
+        <p>Models each repeat candidate's expected gain from data preknowledge cannot touch, then flags
+          departures using exposed-item performance and response speed, with a bootstrap-calibrated
+          false-positive rate for every flag.</p>
+        <p class="evidence"><b>Validation:</b> flagged 98.9% of preknowledge cases at a 1.03% false-positive
+          rate; raw-gain flagging of the same number caught 42% and flagged about nine times as many honest
+          remediated candidates.</p>
+        <div class="links">
+          <a class="btn" href="https://CRAN.R-project.org/package=retestR">CRAN</a>
+          <a class="btn" href="https://edidatasolutions.github.io/retestR/">Docs</a>
+          <a class="btn" href="https://github.com/edidatasolutions/retestR">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="theme">Item development</span>
+        <h3>coldstart</h3>
+        <p class="q">How do we calibrate AI-generated items before we have pretest seats?</p>
+        <p>Predicts each new item's difficulty from its features (text embeddings, attributes, template
+          family) with honest uncertainty, uses the prediction as a robust prior, plans pretest sample
+          sizes, and withdraws priors from template families whose predictions fail.</p>
+        <p class="evidence"><b>Validation:</b> with predicted priors, 25 pretest responses per item did about
+          what 50 do without them, and 90% predictive intervals covered 90% of true difficulties.</p>
+        <div class="links">
+          <a class="btn" href="https://CRAN.R-project.org/package=coldstart">CRAN</a>
+          <a class="btn" href="https://edidatasolutions.github.io/coldstart/">Docs</a>
+          <a class="btn" href="https://github.com/edidatasolutions/coldstart">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="theme">Item bank maintenance</span>
+        <h3>driftwatch</h3>
+        <p class="q">Not "did it drift?" but when, how, and what should we do?</p>
+        <p>Sequential CUSUM monitoring of item parameter drift for continuous testing and pre-equated banks:
+          change points, gradual versus abrupt drift, thresholds tuned on the program's own design, score
+          impact, and an audit log of recommended actions.</p>
+        <p class="evidence"><b>Validation:</b> design-calibrated thresholds held false alarms at 0.86% against a
+          1% target (4.0% with a textbook threshold) and detected 99% of abrupt drift a median of four
+          windows after onset.</p>
+        <div class="links">
+          <a class="btn" href="https://CRAN.R-project.org/package=driftwatch">CRAN</a>
+          <a class="btn" href="https://edidatasolutions.github.io/driftwatch/">Docs</a>
+          <a class="btn" href="https://github.com/edidatasolutions/driftwatch">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="theme">Assessment systems</span>
+        <h3>throughyear</h3>
+        <p class="q">How should interim results be used in a through-year system?</p>
+        <p>Links interims to the summative scale with measurement error carried forward, evaluates
+          prior-informed multistage routing, and checks fairness for late enrollers, low scorers and
+          students who grow after the last interim.</p>
+        <p class="evidence"><b>Validation:</b> interim priors raised routing accuracy from 70% to 84%, but using
+          them to score under-reported late-growing students by 0.29 logits: route with them, do not score
+          with them.</p>
+        <div class="links">
+          <a class="btn" href="https://CRAN.R-project.org/package=throughyear">CRAN</a>
+          <a class="btn" href="https://edidatasolutions.github.io/throughyear/">Docs</a>
+          <a class="btn" href="https://github.com/edidatasolutions/throughyear">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="theme">Fairness and comparability</span>
+        <h3>transDIF</h3>
+        <p class="q">Does a score mean the same thing in both languages?</p>
+        <p>Comparability for translated and adapted exams with small translated-language groups: robust
+          linking through the densest cluster of items, empirical-Bayes DIF detection with false-discovery
+          control, pass-rate impact, and item-feature explanations for translators.</p>
+        <p class="evidence"><b>Validation:</b> on 60-item tests, robust linking was essentially unbiased where
+          mean linking was not, and DIF detection kept false discoveries below its 10% target with more power
+          than Mantel&ndash;Haenszel.</p>
+        <div class="links">
+          <a class="btn" href="https://CRAN.R-project.org/package=transDIF">CRAN</a>
+          <a class="btn" href="https://edidatasolutions.github.io/transDIF/">Docs</a>
+          <a class="btn" href="https://github.com/edidatasolutions/transDIF">Source</a>
+        </div>
+      </article>
+
+    </div>
+
+    <section class="install">
+      <h2>Install</h2>
+      <p class="sub">All six packages are on CRAN and depend only on base R.</p>
+<pre>install.packages(c("decisionfacets", "retestR", "coldstart",
+                   "driftwatch", "throughyear", "transDIF"))</pre>
+    </section>
+
+    <div class="principles">
+      <div><h4>Validated against known truth</h4><p>Every package includes a simulator and a replication study, and reports where its methods fall short.</p></div>
+      <div><h4>Built for operations</h4><p>Outputs are written for the decisions programs make: flags, pass rates, audit logs and reports.</p></div>
+      <div><h4>Open and lightweight</h4><p>MIT-licensed, documented, and free of heavy dependencies, so they install anywhere R runs.</p></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    Daniel Edi, Ph.D. &middot; <a href="https://sites.google.com/view/daniel-edi-phd/home">sites.google.com/view/daniel-edi-phd</a>
+    &middot; Packages are personal open-source work and are not products of any employer.
+  </div>
+</footer>
+</body>
+</html>
