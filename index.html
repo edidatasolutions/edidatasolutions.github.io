@@ -54,6 +54,7 @@
   .card p { margin: 0 0 12px; }
   .evidence { background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; font-size: 14.5px; margin: 0 0 14px; }
   .evidence b { color: var(--accent); }
+  .new { border-left: 3px solid var(--accent); padding-left: 10px; font-size: 14.5px; }
   .card .links { margin-top: auto; }
   .card .btn { font-size: 13.5px; padding: 6px 12px; }
   section.install { margin: 44px 0 10px; }
@@ -106,9 +107,14 @@
         <p>Counterfactual pass probabilities for oral exams, OSCEs and essay scoring under the many-facet
           Rasch model, computed exactly for the assigned panel, an average panel and a random panel, plus a
           split of misclassification into measurement error and rater assignment.</p>
+        <p class="new"><b>New in the development version:</b> oral examinations where each case is scored by a
+          different examiner, continuous 0&ndash;100 scores through a linear many-facet model, a mean-score
+          pass rule, and a check that the rating network connects all examiners.</p>
         <p class="evidence"><b>Validation:</b> estimates from standard MFRM software recovered rater-dependent
           candidates as well as an oracle that knows the true parameters (71%), and severity-adjusted scoring
-          removed rater dependence entirely.</p>
+          removed rater dependence entirely. With one examiner per case on 0&ndash;100 scores (600 simulated
+          exams), expected misclassifications matched actual ones and examiners caused 2&ndash;14% of them,
+          depending on how much examiners differ.</p>
         <div class="links">
           <a class="btn" href="https://CRAN.R-project.org/package=decisionfacets">CRAN</a>
           <a class="btn" href="https://edidatasolutions.github.io/decisionfacets/">Docs</a>
